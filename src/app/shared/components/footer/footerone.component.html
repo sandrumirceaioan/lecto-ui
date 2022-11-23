@@ -9,17 +9,15 @@
                      <div class="footer-img">
                         <a [routerLink]="['']"><img src="assets/img/logo/lectoform-logo-new-light.webp"
                               alt="lectoform-logo"></a>
-                        <p>LectoForm Consulting este o companie privata a carei misiune este furnizarea de servicii
-                           complete de instruire prin organizarea de cursuri autorizate online sau cursuri autorizate in
-                           sala de conferinte pentru sectorul public si privat.</p>
+                        <p>{{settings.company.description}}</p>
                      </div>
                      <div class="footer-icon">
-                        <a href="https://www.facebook.com/lectoformconsulting" target="_blank"><i
+                        <a href="{{settings.social.facebook || '#'}}" target="_blank"><i
                               class="fab fa-facebook-f"></i></a>
-                        <a href="https://twitter.com/lectoform" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/lectoform" target="_blank"><i
+                        <a href="{{settings.social.twitter || '#'}}" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="{{settings.social.instagram || '#'}}" target="_blank"><i
                               class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/raluca-ivanusca-787222232" target="_blank"><i
+                        <a href="{{settings.social.linkedin || '#'}}" target="_blank"><i
                               class="fab fa-linkedin-in"></i></a>
                      </div>
                   </div>
@@ -68,7 +66,7 @@
                   <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                      <div class="copyright-text border-line">
                         <p>Copyright © 2022 by <br />
-                           <a href="https://www.lectoform.ro/" target="_blank"><span>Lectoform Consulting SRL</span></a>
+                           <a href="https://www.lectoform.ro/" target="_blank"><span>{{settings.title}}</span></a>
                         </p>
                      </div>
                   </div>
@@ -117,7 +115,7 @@
                         </div>
                         <div class="copyright-svg-content">
                            <p>Contacteaza-ne</p>
-                           <h5><a href="tel:0234512143">0234.512.143</a></h5>
+                           <h5><a href="tel:0234512143">{{appService.getFirstPhone()}}</a></h5>
                         </div>
                      </div>
                   </div>

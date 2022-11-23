@@ -1,0 +1,148 @@
+<div class="body-overlay" [class.opened]="sidebarInfoActive" (click)="sidebarInfoActive = !sidebarInfoActive"></div>
+
+<!-- side toggle start -->
+<div class="fix">
+    <div class="side-info" [class.opened]="sidebarInfoActive">
+        <div class="side-info-content">
+            <div class="offset-widget offset-logo mb-40">
+                <div class="row align-items-center">
+                    <div class="col-9">
+                        <a [routerLink]="['/']">
+                            <img src="assets/img/logo/lectoform-logo-new-small.webp" alt="LectoForm">
+                        </a>
+                    </div>
+                    <div class="col-3 text-end"><button class="side-info-close"
+                            (click)="sidebarInfoActive = !sidebarInfoActive"><i class="fal fa-times"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <app-mobilemenu></app-mobilemenu>
+
+            <div class="offset-widget offset_searchbar mb-30">
+                <div class="menu-search position-relative ">
+                    <form action="#" class="filter-search-input">
+                        <input type="text" placeholder="Search keyword">
+                        <button><i class="fal fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="offset-widget offset_menu-top mb-20">
+                <div class="header-menu-top-icon mb-20">
+                    <a href="#"><i class="fas fa-phone"></i>{{appService.getFirstPhone()}}</a>
+                    <a href="#"><i class="fal fa-envelope"></i>{{settings.contact.email}}</a>
+                    <i class="fal fa-map-marker-alt"></i><span>{{settings.contact.address}}</span>
+                </div>
+            </div>
+            <div class="offset-widget button mb-20 d-block d-lg-none">
+                <a class="edu-four-btn" href="javascript:void(0)">Enroll now</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- side toggle end -->
+
+<!-- header-area-start -->
+<header>
+    <!--header-top-area start -->
+    <div class="header-top-area d-none d-lg-block">
+        <div class="container-fluid">
+            <div class="header-top-inner">
+                <div class="row align-items-center">
+                    <div class="col-xl-8 col-lg-8">
+                        <div class="header-top-icon">
+                            <a href="tel:{{appService.getFirstPhone()}}">
+                                <i class="fas fa-phone"></i>{{appService.getFirstPhone()}}
+                            </a>
+                            <a href="mailto:{{settings.contact.email}}"><i
+                                    class="fal fa-envelope"></i>{{settings.contact.email}}</a>
+                            <i class="fal fa-map-marker-alt"></i><span>{{settings.contact.address}}</span>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4">
+                        <div class="header-top-login d-flex f-right">
+                            <div class="header-social">
+                                <a href="{{settings.social.facebook}}" target="_blank"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a href="{{settings.social.twitter}}" target="_blank"><i class="fab fa-twitter"></i></a>
+                                <a href="{{settings.social.instagram}}" target="_blank"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a href="{{settings.social.youtube}}" target="_blank"><i class="fab fa-youtube"></i></a>
+                                <a href="{{settings.social.linkedin}}" target="_blank"><i
+                                        class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- header-top-area end -->
+    <div class="header-main3 transpaerent-header sticky-header"
+        [ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky}">
+        <div class="container-fluid">
+            <div class="header-main-wrapper">
+                <div class="row align-items-center">
+                    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-3 col-3">
+                        <div class="header-logo">
+                            <a [routerLink]="['/']"><img class="logo-white"
+                                    src="assets/img/logo/lectoform-logo-new-light.webp" alt="logo"></a>
+                            <a [routerLink]="['/']"><img class="logo-black"
+                                    src="assets/img/logo/lectoform-logo-new.webp" alt="logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-10 col-lg-10 col-md-9 col-sm-9 col-9">
+                        <div class="header-main-right d-flex justify-content-end">
+                            <div class="main-menu mr-30 main-menu-lg-block">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                        <li><a [routerLink]="['/']">Acasa</a></li>
+                                        <li class="menu-item-has-children"><a [routerLink]="['/cursuri']">Cursuri</a>
+                                            <ul class="sub-menu">
+                                                <li><a [routerLink]="['/cursuri-online']">Cursuri Online</a></li>
+                                                <li><a [routerLink]="['/cursuri-locale']">Cursuri Locale</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item-has-children"><a [routerLink]="['/locatii']">Locatii</a>
+                                            <ul class="sub-menu">
+                                                <li><a [routerLink]="['/ghid-locatii']">Ghid Locatii</a></li>
+                                                <li><a [routerLink]="['/ghid-hotelier']">Ghid Hotelier</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item-has-children"><a href="#">Info</a>
+                                            <ul class="sub-menu">
+                                                <li><a [routerLink]="['/cine-suntem']">Cine Suntem</a></li>
+                                                <li><a [routerLink]="['/lectori-dedicati']">Lectori Dedicati</a></li>
+                                                <li><a [routerLink]="['/portofoliu']">Portofoliu</a></li>
+                                                <li><a [routerLink]="['/reduceri']">Reduceri</a></li>
+                                                <li><a [routerLink]="['/legislatie']">Legislatie</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a [routerLink]="['/contact']">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="header-btn">
+                                <a class="edu-thard-btn d-none d-lg-block" href="javascript:void(0)"><i
+                                        class="fal fa-user-plus mr-10"></i> Inscrieri</a>
+                                <div class="menu-bar ml-20">
+                                    <a class="side-toggle header-3" href="javascript:void(0)"
+                                        (click)="sidebarInfoActive = !sidebarInfoActive">
+                                        <div class="bar-icon header-3">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+<!-- header-aea-end -->

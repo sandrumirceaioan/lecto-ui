@@ -372,6 +372,7 @@
 	margin: 0px 29px;
 }
 .header-top-area {
+	background: $heading-color;
 	border-bottom: 1px solid #ebebeb;
 }
 .header-top-inner {
@@ -397,6 +398,7 @@
 		color: $theme-color;
 	}
 	a {
+		color: $white;
 		position: relative;
 		padding-right: 35px;
 		@media #{$lg} {
@@ -412,6 +414,7 @@
 		}
 	}
 	span {
+		color: $white;
 		font-size: 14px;
 		font-weight: 600;
 	}
@@ -496,7 +499,7 @@
 		color: $white;
 		margin-left: 20px;
 		&:hover {
-			color: $theme-color-2;
+			color: $theme-color;
 		}
 	}
 }
@@ -516,13 +519,8 @@
 .header-main3 .main-menu ul li ul li.menu-item-has-children::after {
 	color: #212237;
 }
-.header-university-top-area {
-	background-color: $theme-color;
-	padding: 12px 0;
-	line-height: 1;
-}
 .header-main3 {
-	border-bottom: 1px solid #6d6d6d;
+	border-bottom: 0px solid #6d6d6d;
 }
 .header.header-main3 {
 	&:before {
@@ -537,6 +535,7 @@
 }
 .hero-area-3.hero-height-3 > * {
 	position: relative;
+	margin-bottom: 45px;
 }
 .header-main3.transpaerent-header::after {
 	position: absolute;
@@ -555,33 +554,6 @@
 	position: relative;
 	z-index: 9;
 }
-.header-university-top-area .header-left {
-	span {
-		margin-left: 10px;
-		font-size: 14px;
-		font-weight: 600;
-		color: $white;
-	}
-	a {
-		color: $white;
-		position: relative;
-		padding-right: 35px;
-		font-size: 14px;
-		font-weight: 600;
-		&:before {
-			position: absolute;
-			content: "";
-			background: #5b91fb;
-			height: 40px;
-			width: 1px;
-			top: -12px;
-			right: 13px;
-		}
-	}
-	i {
-		margin-right: 10px;
-	}
-}
 .header-main3 .main-menu {
 	ul {
 		li {
@@ -593,7 +565,7 @@
 }
 .hero-height-3 {
 	overflow: hidden;
-	height: 900px;
+	height: 650px;
 	display: flex;
 	align-items: center;
 	@media #{$xs} {

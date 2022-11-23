@@ -474,18 +474,15 @@ p {
 	font-size: 16px;
 	font-weight: 600;
 	color: $white;
-	background-color: $theme-color;
-	padding: 0 40px;
+	background-color: $theme-secondary-color;
+	padding: 0 17px;
 	@include border-radius(4px);
 	@include transition(0.3s);
 	border: 1px solid transparent;
 	&:hover {
-		background-color: $theme-color-2;
-		color: $heading-color;
-	}
-	&:focus {
+		background-color: $theme-secondary-color;
 		color: $white;
-		border: 1px solid transparent;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 	}
 }
 .edu-sec-btn {
@@ -535,14 +532,15 @@ p {
 	text-align: center;
 	font-size: 16px;
 	font-weight: 600;
-	color: $heading-color;
-	background-color: $theme-color-2;
+	color: $white;
+	background-color: $theme-color;
 	padding: 0 40px;
 	display: inline-block;
 	@include transition(0.3s);
 	&:hover {
 		background-color: $theme-color;
 		color: $white;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 	}
 }
 .edu-four-btn {
@@ -573,14 +571,14 @@ p {
 	font-size: 16px;
 	font-weight: 600;
 	color: $white;
-	background-color: $theme-color;
+	background-color: $theme-secondary-color;
 	padding: 0 40px;
 	@include transition(0.3s);
 	border: 1px solid transparent;
 	&:hover {
-		background-color: $theme-color-2;
-		color: $heading-color;
-		border: 1px solid $theme-color-2;
+		background-color: $theme-secondary-color;
+		color: $white;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 	}
 }
 .edu-six-btn {
@@ -589,16 +587,16 @@ p {
 	text-align: center;
 	font-size: 16px;
 	font-weight: 600;
-	color: $heading-color;
-	background-color: $theme-color-2;
+	color: $white;
+	background-color: $theme-color;
 	border: 1px solid transparent;
-	padding: 0 40px;
+	padding: 0 25px;
 	display: inline-block;
 	@include transition(0.3s);
 	&:hover {
 		background-color: $theme-color;
 		color: $white;
-		border: 1px solid $white;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 	}
 }
 .edo-theme-btn {
