@@ -13,13 +13,12 @@
 	}
 }
 .university-card {
-	margin-top: -100px;
+	margin-top: -140px;
 }
 .university-course-box {
-	padding: 24px 48px 24px 48px;
-	background: #1415178f;
-	width:315px;
-	height: 250px;
+	width: 300px;
+	padding: 42px 48px 42px 48px;
+	background: $theme-color;
 	@media #{$xl} {
 		padding: 35px 48px 40px 48px;
 	}
@@ -37,11 +36,13 @@
 .university-main-wraper {
 	position: relative;
 	z-index: 5;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	//border-left: 20px solid $theme-secondary-color;
+	//border-bottom: 20px solid $theme-secondary-color;
 }
 .university-card-wrapper {
 	padding: 45px 40px 45px 40px;
 	background-color: #f6f8fb;
-	height: 250px;
 	@media #{$lg} {
 		padding: 47px 20px 35px 20px;
 	}
@@ -49,6 +50,16 @@
 		padding: 45px 30px 45px 30px;
 		width: 100%;
 	}
+
+	h2 {
+		color: $theme-color;
+	}
+
+	mat-form-field {
+		border-radius: 5px;
+		// background: $theme-color;
+	}
+
 }
 .university-card-text {
 	p {
@@ -79,9 +90,7 @@
 	margin-bottom: 30px;
 	@include transition(0.3s);
 }
-.university-card-wrapper:hover .university-card-icon {
-	transform: translateY(-10px);
-}
+
 .university-card-content {
 	h3 {
 		font-size: 18px;

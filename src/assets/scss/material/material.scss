@@ -1,0 +1,47 @@
+@use '@angular/material' as mat;
+@import "./lecto.palette.scss";
+
+@include mat.core();
+
+$my-primary: mat.define-palette($lecto-palette-primary, 600);
+$my-accent: mat.define-palette($lecto-palette-accent, 600);
+$my-warn: mat.define-palette($lecto-palette-warn);
+
+$lecto-theme: mat.define-light-theme((
+ color: (
+   primary: $my-primary,
+   accent: $my-accent,
+   warn: $my-warn,
+ )
+));
+
+@include mat.core-theme($lecto-theme);
+@include mat.button-theme($lecto-theme);
+@include mat.all-component-themes($lecto-theme);
+
+.mat-mdc-raised-button {
+    padding: 25px 30px !important;
+    border-radius: 0px !important;
+}
+
+.mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__leading {
+  border-top: 2px solid !important;
+  border-left: 2px solid !important;
+  border-bottom: 2px solid !important;
+  border-color: mat.get-color-from-palette($my-primary) !important;
+}
+
+.mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__trailing {
+  border-top: 2px solid !important;
+  border-right: 2px solid !important;
+  border-bottom: 2px solid !important;
+  border-color: mat.get-color-from-palette($my-primary) !important;
+}
+
+.mat-mdc-form-field-subscript-wrapper {
+  display: none !important;
+}
+
+// .mat-mdc-select-placeholder {
+//   color: #ffffff !important;
+// }

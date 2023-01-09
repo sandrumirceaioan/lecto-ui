@@ -2,33 +2,16 @@
 <section class="slider-area hero-height position-relative fix">
    <img class="shape-3 d-none d-xxl-block" src="assets/img/shape/shape-03.png" alt="image not found">
    <div class="container">
-      <div class="row">
-         <div class="col-xl-6 col-lg-6 mb-30">
+      <div class="row justify-content-center">
+         <div class="col-xl-6 text-center">
             <div class="hero-text">
-               <h1><span class="down-mark-line-2">Cursuri Autorizate</span></h1>
+               <h1><span class="pb-20">Cursuri <span class="down-mark-line-2">Autorizate</span></span></h1>
                <h2>In locatii inedite sau din confortul casei tale...</h2>
-               <p>{{settings.description}}</p>
-               <div class="hero-btn">
-                  <a class="edu-btn" [routerLink]="['/cursuri-online.pdf']"><i class="fal fa-download mr-10"></i> Cursuri LOCALE</a>
-                  <a class="edu-btn" [routerLink]="['/cursuri-locale.pdf']"><i class="fal fa-download mr-10"></i> Cursuri ONLINE</a>
-               </div>
-            </div>
-         </div>
-         <div class="col-xl-6 col-lg-6">
-            <div class="hero-right position-relative">
-               <img class="shape-6" src="assets/img/shape/acadenic-shape-1.webp" alt="shape">
-               <div class="hero-thumb-01 d-none d-lg-block">
-                  <img src="assets/img/slider/hero-01.webp" alt="shape">
-               </div>
-               <div class="shape-5">
-                  <div class="course-card">
-                     <img src="assets/img/shape/slider-card-1.webp" alt="image not found">
-                     <img src="assets/img/shape/slider-card-2.webp" alt="image not found">
-                     <img src="assets/img/shape/slider-card-3.webp" alt="image not found">
-                     <img src="assets/img/shape/slider-card-4.webp" alt="image not found">
-                     <span><i class="far fa-plus"></i></span>
-                  </div>
-                  <h5>Peste <span>11,863+</span> absolventi</h5>
+               <div class="hero-actions d-flex flex-row justify-content-between">
+                  <button mat-raised-button color="accent" [routerLink]="['/cursuri-online.pdf']"><i
+                        class="fal fa-download mr-10"></i> Cursuri ONLINE</button>
+                  <button mat-raised-button color="accent" [routerLink]="['/cursuri-online.pdf']"><i
+                        class="fal fa-download mr-10"></i> Cursuri LOCALE</button>
                </div>
             </div>
          </div>

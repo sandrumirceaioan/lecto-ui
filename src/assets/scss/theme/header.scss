@@ -419,33 +419,14 @@
 		font-weight: 600;
 	}
 }
-.header-user-login {
-	span {
-		margin-right: 20px;
-		&::before {
-			position: absolute;
-			width: 1px;
-			height: 100%;
-			background: $border;
-			content: "";
-			right: 0;
-		}
-		a {
-			font-size: 14px;
-			font-weight: 600;
-			&:hover {
-				color: $theme-color;
-			}
-		}
-	}
-}
+
 .header-social {
 	a {
-		color: #a6b9cc;
+		color: $white;
 		font-size: 15px;
 		margin-left: 20px;
 		&:hover {
-			color: $theme-color-2;
+			color: $theme-secondary-color;
 		}
 	}
 }

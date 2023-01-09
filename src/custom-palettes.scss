@@ -3,7 +3,7 @@ $white: #ffffff;
 $black: #000;
 
 // Grey Colors ---------------
-$theme-color-2: #E47545;
+$theme-color-2: #383534;
 
 // Grey-2Colors ---------------
 $theme-color-2-2:#A2A2A2;
@@ -17,7 +17,7 @@ $footer-bg: #000;
 // basic color
 $theme-color: #6dc1c0;
 
-$theme-secondary-color: #E47545;
+$theme-secondary-color: #e47545;
 
 
 
@@ -373,11 +373,32 @@ $xs:'(max-width: 575px)';
 		position: absolute;
 		content: "";
 		left: 0;
-		bottom: 0px;
+		bottom: 8%;
 		width: 100%;
 		z-index: -1;
 		height: 100%;
 		background: url(../src/assets/img/icon/down-mark-line-2.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: bottom;
+		-webkit-animation: section-animation 3s infinite;
+		animation: section-animation 3s infinite;
+	}
+}
+
+.down-mark-line-3 {
+	position: relative;
+	z-index: 2;
+	display: inline-block;
+	&::before {
+		position: absolute;
+		content: "";
+		left: 0;
+		bottom: 8%;
+		width: 100%;
+		z-index: -1;
+		height: 100%;
+		background: url(../src/assets/img/icon/down-mark-line-3.png);
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: bottom;

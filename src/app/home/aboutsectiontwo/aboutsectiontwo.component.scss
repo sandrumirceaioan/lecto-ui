@@ -1,0 +1,57 @@
+// about-style
+@import "../../../custom-palettes.scss";
+.about-area {
+	background: $section-bg url("../../../assets/img/bg/partner.webp");
+	background-repeat: no-repeat;
+	background-position: right 30% center;
+	background-size: contain;
+
+	.about-shape {
+		position: absolute;
+		top: 15%;
+		right: 2%;
+		@media #{$xs,$md} {
+			display: none;
+		}
+	}
+
+	.about-main-img {
+		padding-left: 10px;
+	}
+
+	.about-img img {
+		max-width: 100%;
+	}
+
+	.student-choose-list {
+		margin-bottom: 40px;
+		li {
+			margin-bottom: 15px;
+			color: $heading-color;
+		}
+		i {
+			margin-right: 10px;
+			color: #d0d9e9;
+			font-size: 20px;
+			transform: translateY(1px);
+		}
+	}
+	.student-choose-list i.far {
+		color: $theme-color;
+	}
+	.student-btn {
+		@media #{$md,$sm,$xs} {
+			margin-bottom: 30px;
+		}
+	}
+
+	.error-thumb {
+		img {
+			margin-bottom: 40px;
+			max-width: 100%;
+		}
+	}
+	.error-btn {
+		margin-top: 35px;
+	}
+}

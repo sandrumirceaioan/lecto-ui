@@ -2,19 +2,57 @@
 <div class="university-card">
     <div class="container">
         <div class="row">
-            <div class="col-xl-12 col-lg-12 col-md-12">
-                <div class="university-main-wraper d-flex align-items-center">
-                    <div class="university-course-box d-flex align-items-center">
-                        <div class="university-card-text">
-                            <h3>Cauta <span>cursuri</span>...</h3>
-                            <a class="edu-six-btn" [routerLink]="['/course']">Vezi Toate Cursurile</a>
+            <div class="col">
+                <div class="university-main-wraper d-flex flex-row w-100 align-items-stretch">
+                    <div class="university-course-box">
+                        <div class="university-card-text flex-fill">
+                            <h3>Invaţă cu<br /><span>Lectoform</span></h3>
+                            <a mat-raised-button color="accent" [routerLink]="['/cursuri']">Vezi toate Cursurile</a>
                         </div>
                     </div>
-                    <div class="university-card-wrapper flex-fill">
-                        <div class="university-card-content">
-                            <h3>Filtru cursuri...</h3>
-                        </div>
+                    <div class="university-card-wrapper d-flex flex-column flex-fill">
+                        <h2>Cauta cursuri...</h2>
+                        <form [formGroup]="searchGroup"
+                            class="flex-fill d-flex flex-column flex-lg-row justify-content-evenly align-items-center mt-40">
+                            <mat-form-field appearance="outline">
+                                <mat-select formControlName="course" placeholder="Curs" #singleSelect>
+                                    <mat-option>
+                                        <ngx-mat-select-search formControlName="courseFilter"></ngx-mat-select-search>
+                                    </mat-option>
+                                    <mat-option *ngFor="let curs of courses | async" [value]="curs._id">
+                                        {{curs.titlu}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+
+                            <mat-form-field appearance="outline">
+                                <mat-select formControlName="location" placeholder="Locatie" #singleSelect>
+                                    <mat-option>
+                                        <ngx-mat-select-search formControlName="locationFilter"></ngx-mat-select-search>
+                                    </mat-option>
+                                    <mat-option *ngFor="let location of locations | async" [value]="location._id">
+                                        {{location.titlu}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+
+                            <mat-form-field appearance="outline">
+                                <mat-select formControlName="range" placeholder="Perioada" #singleSelect>
+                                    <mat-option>
+                                        <ngx-mat-select-search formControlName="rangeFilter"></ngx-mat-select-search>
+                                    </mat-option>
+                                    <mat-option *ngFor="let curs of courses | async" [value]="curs._id">
+                                        {{curs.titlu}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+
+                            <a mat-raised-button color="accent" [routerLink]="['/cursuri']">Cauta</a>
+                        </form>
+
                     </div>
+
+
                 </div>
             </div>
         </div>

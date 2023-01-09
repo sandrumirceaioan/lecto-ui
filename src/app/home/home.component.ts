@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HeroComponent } from './hero/hero.component';
 import { CardsectionComponent } from './cardsection/cardsection.component';
+import { MessagesectionComponent } from './messagesection/messagesection.component';
+import { AboutsectiontwoComponent } from './aboutsectiontwo/aboutsectiontwo.component';
+import { CampussectionComponent } from './campussection/campussection.component';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +14,10 @@ import { CardsectionComponent } from './cardsection/cardsection.component';
     CommonModule,
     RouterModule,
     HeroComponent,
-    CardsectionComponent
+    CardsectionComponent,
+    MessagesectionComponent,
+    AboutsectiontwoComponent,
+    CampussectionComponent,
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
